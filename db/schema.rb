@@ -15,8 +15,12 @@ ActiveRecord::Schema.define(version: 2020_03_12_114038) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.integer "shop_id"
+    t.integer "sku_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["shop_id"], name: "index_products_on_shop_id"
+    t.index ["sku_id"], name: "index_products_on_sku_id"
   end
 
   create_table "shops", force: :cascade do |t|

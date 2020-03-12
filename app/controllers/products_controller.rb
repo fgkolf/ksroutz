@@ -65,10 +65,12 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
+      @shop = Shop.find(@product.shop_id)
+      @sku = Sku.find(@product.sku_id)
     end
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:name, :description)
+      params.require(:product).permit(:name, :description, :shop_id, :sku_id)
     end
 end

@@ -21,6 +21,14 @@
     <%= form.text_area :description %>
   </div>
 
+   <div class="field">
+    <%= form.collection_select(:shop_id, Shop.all, :id, :name) %>
+  </div>
+
+  <div class="field">
+    <%= form.collection_select(:sku_id, Sku.all, :id, :title) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
