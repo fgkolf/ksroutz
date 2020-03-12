@@ -1,9 +1,7 @@
 # README
 
 Sample e-shop application for training purposes. The application provides 3 resources,
-Shops, SKUs and Products. Each model's index page can be accessed from the root page via links.
-
-Things you may want to cover:
+Shops, SKUs and Products. Each model's index page can be accessed from the home page via links.
 
 * Ruby version: 2.5.7
 
@@ -17,6 +15,5 @@ Things you may want to cover:
 
 * Deployment instructions
     * bundle install
-    * rails db:migrate
     * rails server
     * visit http://localhost:3000
